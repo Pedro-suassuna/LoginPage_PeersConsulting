@@ -11,6 +11,24 @@
   --font-primary: "Roboto", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(5, 21, 62);
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
 body {
   font-size: 1.6rem;
   font-family: var(--font-primary);
@@ -19,6 +37,7 @@ body {
   background-color: rgb(227, 243, 29);
   min-height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .rectangle {
@@ -49,9 +68,9 @@ body {
 }
 
 .screen {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 2rem;
 }
 
 .logo img {
@@ -68,6 +87,7 @@ form {
     0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1),
     inset 0px -4px 5px rgba(0, 0, 0, 0.22);
   position: relative;
+  width: clamp(20rem, 2rem + 80vw, 40rem);
 }
 
 h1 {
@@ -105,6 +125,7 @@ fieldset {
 .inputBox {
   display: flex;
   align-items: center;
+  position: relative;
   gap: 0.5rem;
   border: 1px solid rgb(5, 21, 62);
   border-radius: 0.8rem;
@@ -115,12 +136,18 @@ fieldset {
 .inputBox input {
   border: none;
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.3rem 2rem 0.3rem 0.3rem;
 }
 
 .inputBox input:focus {
   outline: 0.1rem solid rgba(0, 0, 0, 0.4);
   border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.eye {
+  position: absolute;
+  right: 0.8rem;
+  cursor: pointer;
 }
 
 button {
@@ -167,8 +194,8 @@ button:is(:hover, :focus) {
 .checkBox label::before {
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
+  top: 4%;
+  left: 1%;
   width: 10px;
   height: 10px;
   border: 1px solid rgb(5, 21, 62);
@@ -190,6 +217,7 @@ button:is(:hover, :focus) {
 
 .checkBox input:focus + label::before {
   outline: 2px solid rgb(5, 21, 62);
+  border-radius: 0.2rem;
 }
 
 .divider {
@@ -201,7 +229,7 @@ button:is(:hover, :focus) {
 
 .straightLine {
   border: 1px solid rgb(5, 21, 62);
-  width: 100px;
+  width: 40%;
 }
 
 .divider img {
