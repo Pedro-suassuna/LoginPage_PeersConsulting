@@ -38,6 +38,7 @@ body {
 }
 .visualModes {
   height: min-content;
+  margin-top: 2rem;
 }
 
 .visualModes ion-icon,
