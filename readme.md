@@ -1,7 +1,7 @@
 <h1 align="center">Projetos pessoais (Projeto 1)<br/>App da Peers Consulting</h1>
 
 <p align="center">
-O Pomodoro perfeito para seus momentos de concentração! ⏰🧘🏽‍♂️
+E se... a Peers fizesse um app?! Como seria o layout? 💭 
 </p>
 
 <p align="center">
