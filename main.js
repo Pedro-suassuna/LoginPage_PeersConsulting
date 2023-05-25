@@ -1,3 +1,5 @@
+// LÓGICA DO EFEITA DA BARRA DESLIZANTES SOB OS ESCRITOS DO EMAIL E SENHA
+
 let inputEmail = document.querySelector("#email")
 let inputPasword = document.querySelector("#password")
 let line1 = document.querySelector(".line.email")
@@ -29,6 +31,8 @@ function changeBack2() {
   line2.classList.add("slideReverse")
 }
 
+//LÓGICA DO OCULTAR/VISUALIZAR SENHA
+
 let eyeBlocked = document.querySelector(".closed")
 let eyeOpen = document.querySelector(".opened")
 
@@ -45,4 +49,18 @@ function closeEye() {
   eyeBlocked.classList.remove("hide")
   eyeOpen.classList.add("hide")
   inputPasword.setAttribute("type", "password")
+}
+
+// LÓGICA DO DARK E LIGHT MODE
+
+let sunButton = document.querySelector(".sun")
+let moonButton = document.querySelector(".moon")
+
+sunButton.addEventListener("click", changeMode)
+moonButton.addEventListener("click", changeMode)
+
+function changeMode() {
+  document.body.classList.toggle("darkMode")
+  sunButton.classList.toggle("hide")
+  moonButton.classList.toggle("hide")
 }

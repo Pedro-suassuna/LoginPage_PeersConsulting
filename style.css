@@ -30,10 +30,24 @@ body {
   font-family: var(--font-primary);
   display: grid;
   place-items: center;
+  grid-template-rows: max-content 1fr;
   background-color: var(--primary-color);
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+}
+.visualModes {
+  height: min-content;
+}
+
+.visualModes ion-icon,
+.visualModes svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.moon path {
+  color: white;
 }
 
 .rectangle {
@@ -66,6 +80,8 @@ body {
 .screen {
   display: grid;
   place-items: center;
+  justify-self: s;
+  align-self: start;
   margin: 0 auto 2rem;
 }
 
