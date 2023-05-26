@@ -22,7 +22,11 @@ E se... a Peers fizesse um app?! Como seria o layout? 💭
 </br>
 
 <p align = "center">
-<img src="https://i.imgur.com/Ey1sTmk.png"/>
+<img src="https://i.imgur.com/AlHhIYM.png"/>
+</p>
+
+<p align = "center">
+<img src="https://i.imgur.com/4qNKlYi.png"/>
 </p>
 
 <br>
@@ -37,7 +41,7 @@ E se... a Peers fizesse um app?! Como seria o layout? 💭
     </tr>
     <tr align="center">
       <td>23/05/2023</td>
-      <td>24/05/2023</td>
+      <td>26/05/2023</td>
     </tr>
   </table>
 </div>
