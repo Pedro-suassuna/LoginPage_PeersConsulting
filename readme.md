@@ -25,6 +25,8 @@ E se... a Peers fizesse um app?! Como seria o layout? 💭
 <img src="https://i.imgur.com/AlHhIYM.png"/>
 </p>
 
+<br>
+
 <p align = "center">
 <img src="https://i.imgur.com/4qNKlYi.png"/>
 </p>
