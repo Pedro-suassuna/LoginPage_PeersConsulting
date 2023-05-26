@@ -103,7 +103,7 @@ l837 0 0 180 0 180 -872 -1 c-729 0 -882 -3 -927 -15z"
         <div class="rectangle bottom"></div>
         <h1>Seja bem-vindo!</h1>
         <div class="userSelection">
-          <p>Peers</p>
+          <p>Cliente</p>
           <div class="switch__container">
             <input
               id="switch-flat"
@@ -112,28 +112,53 @@ l837 0 0 180 0 180 -872 -1 c-729 0 -882 -3 -927 -15z"
             />
             <label for="switch-flat"></label>
           </div>
-          <p>Cliente</p>
+          <p>Peers</p>
         </div>
-        <fieldset>
+        <fieldset class="clientForm">
           <div class="inputWrapper">
-            <label class="emailLabel" for="email">E-mail</label>
+            <label class="emailLabel" for="emailClient">E-mail</label>
             <div class="line email"></div>
             <div class="inputBox">
               <ion-icon name="mail-outline"></ion-icon>
-              <input type="email" id="email" />
+              <input type="email" id="emailClient" class="emailInput" />
             </div>
           </div>
           <div class="inputWrapper">
-            <label for="password">Senha</label>
+            <label for="passwordClient">Senha</label>
             <div class="line password"></div>
             <div class="inputBox">
               <ion-icon name="lock-closed-outline"></ion-icon>
-              <input type="password" id="password" />
+              <input
+                type="password"
+                id="passwordClient"
+                class="passwordInput"
+              />
+              <ion-icon name="eye-off-outline" class="eye closed" onclick="toggleEye()"></ion-icon>
+              <ion-icon name="eye-outline" class="eye opened hide" onclick="toggleEye()"></ion-icon>
+            </div>
+          </div>
+          <button class="buttonClient" type="submit">LOGIN</button>
+        </fieldset>
+        <fieldset class="peersForm hide">
+          <div class="inputWrapper">
+            <label class="emailLabel" for="emailPeers">User admin</label>
+            <div class="line email"></div>
+            <div class="inputBox">
+              <ion-icon name="person-outline"></ion-icon>
+              <input type="email" id="emailPeers" class="emailInput" />
+            </div>
+          </div>
+          <div class="inputWrapper">
+            <label for="passwordPeers">Senha</label>
+            <div class="line password"></div>
+            <div class="inputBox">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input type="password" id="passwordPeers" class="passwordInput" />
               <ion-icon name="eye-off-outline" class="eye closed"></ion-icon>
               <ion-icon name="eye-outline" class="eye opened hide"></ion-icon>
             </div>
           </div>
-          <button type="submit">LOGIN</button>
+          <button class="buttonPeers" type="submit">LOGIN</button>
         </fieldset>
         <div class="extraInfo">
           <div class="checkBox">

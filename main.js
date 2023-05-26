@@ -1,7 +1,7 @@
 // LÓGICA DO EFEITA DA BARRA DESLIZANTES SOB OS ESCRITOS DO EMAIL E SENHA
 
-const inputEmail = document.querySelector("#email")
-const inputPasword = document.querySelector("#password")
+const inputEmail = document.querySelector(".emailInput")
+const inputPasword = document.querySelector(".passwordInput")
 const line1 = document.querySelector(".line.email")
 const line2 = document.querySelector(".line.password")
 
@@ -68,15 +68,16 @@ function changeMode() {
 // // LÓGICA DA TELA MODAL DE AGRADECIMENTO
 
 // ABRIR TELA
-const formButton = document.querySelector("button")
+let formButton = document.querySelectorAll("button")
 const screen2 = document.querySelector(".screen2")
 
-formButton.addEventListener("click", showMessage)
+formButton.forEach(button => button.addEventListener("click", showMessage))
 
 function showMessage(e) {
   e.preventDefault()
 
   screen2.classList.add("open")
+
 }
 
 // FECHAR TELA
@@ -87,4 +88,22 @@ closeIcon.addEventListener("click", closeModal)
 
 function closeModal() {
   screen2.classList.remove("open")
+}
+
+// SWITCH
+
+const switchButton = document.querySelector(".switch__container label")
+const clientForm = document.querySelector(".clientForm")
+const peersForm = document.querySelector(".peersForm")
+
+switchButton.addEventListener("click", switchMode)
+
+function switchMode() {
+  if (clientForm.classList.contains("hide")) {
+    clientForm.classList.remove("hide")
+    peersForm.classList.add("hide")
+  } else {
+    clientForm.classList.add("hide")
+    peersForm.classList.remove("hide")
+  }
 }
