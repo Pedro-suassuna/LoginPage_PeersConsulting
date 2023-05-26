@@ -39,6 +39,7 @@ body {
 .visualModes {
   height: min-content;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .visualModes ion-icon,
@@ -84,6 +85,44 @@ body {
   justify-self: s;
   align-self: start;
   margin: 0 auto 2rem;
+}
+
+.screen2 {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+}
+
+.screen2.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.screen2 ion-icon {
+  position: absolute;
+}
+
+.message {
+  background-color: white;
+  color: black;
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  max-width: 30rem;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 3rem;
+}
+
+.message ion-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
 }
 
 .logo svg {

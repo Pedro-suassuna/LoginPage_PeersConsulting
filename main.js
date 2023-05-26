@@ -1,9 +1,9 @@
 // LÓGICA DO EFEITA DA BARRA DESLIZANTES SOB OS ESCRITOS DO EMAIL E SENHA
 
-let inputEmail = document.querySelector("#email")
-let inputPasword = document.querySelector("#password")
-let line1 = document.querySelector(".line.email")
-let line2 = document.querySelector(".line.password")
+const inputEmail = document.querySelector("#email")
+const inputPasword = document.querySelector("#password")
+const line1 = document.querySelector(".line.email")
+const line2 = document.querySelector(".line.password")
 
 inputEmail.addEventListener("focus", change1)
 inputEmail.addEventListener("blur", changeBack1)
@@ -33,8 +33,8 @@ function changeBack2() {
 
 //LÓGICA DO OCULTAR/VISUALIZAR SENHA
 
-let eyeBlocked = document.querySelector(".closed")
-let eyeOpen = document.querySelector(".opened")
+const eyeBlocked = document.querySelector(".closed")
+const eyeOpen = document.querySelector(".opened")
 
 eyeBlocked.addEventListener("click", openEye)
 eyeOpen.addEventListener("click", closeEye)
@@ -53,8 +53,8 @@ function closeEye() {
 
 // LÓGICA DO DARK E LIGHT MODE
 
-let sunButton = document.querySelector(".sun")
-let moonButton = document.querySelector(".moon")
+const sunButton = document.querySelector(".sun")
+const moonButton = document.querySelector(".moon")
 
 sunButton.addEventListener("click", changeMode)
 moonButton.addEventListener("click", changeMode)
@@ -63,4 +63,28 @@ function changeMode() {
   document.body.classList.toggle("darkMode")
   sunButton.classList.toggle("hide")
   moonButton.classList.toggle("hide")
+}
+
+// // LÓGICA DA TELA MODAL DE AGRADECIMENTO
+
+// ABRIR TELA
+const formButton = document.querySelector("button")
+const screen2 = document.querySelector(".screen2")
+
+formButton.addEventListener("click", showMessage)
+
+function showMessage(e) {
+  e.preventDefault()
+
+  screen2.classList.add("open")
+}
+
+// FECHAR TELA
+
+const closeIcon = document.querySelector(".closeModalIcon")
+
+closeIcon.addEventListener("click", closeModal)
+
+function closeModal() {
+  screen2.classList.remove("open")
 }
